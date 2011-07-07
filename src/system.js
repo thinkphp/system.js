@@ -128,7 +128,7 @@ var System = {
                    type property will still be "text"  
                   */
                  var i = document.createElement("input");
-                     i.type = "range"; 
+                     i.setAttribute('type','range'); 
 
                  return i.type !== 'text'; 
               })()
