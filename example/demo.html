@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <title>JavaScript Object with the users's system information</title>
+   <style type="text/css">
+  
+        @font-face
+        {
+            font-family: Zoinks;
+            src: url('fonts/Zoinks.woff');
+        }
+   h1 {font: 50pt Zoinks, sans-serif;}
+
+   table.fancy{
+      background: none repeat scroll 0 0 #FFFFFF;
+      border: 1px solid #F0F0F0;
+      border-collapse: separate;
+      box-shadow: 5px 5px 5px #777777;
+      margin: 1em 0 2em;
+      width: 30%;
+      border-collapse: collapse;
+      margin: 1em 1em 1em 0;
+      background: whitesmoke;
+    }
+
+   table.fancy th, table.fancy td {
+     border: 1px silver solid;
+     padding: 0.2em;
+     text-align: left; 
+   }
+
+   table.fancy tr:hover {
+     background: lightsteelblue !important;
+   }
+   </style>
+   <script type="text/javascript" src="system.min.js"></script>
+</head>
+<body>
+<h1>Object with the users's system information</h1>
+<div id="info"></div>
+   <script type="text/javascript">
+   (function(){
+      var out = '<table class="fancy"><thead><th>Feature</th><th>Support</th></thead>';
+          out += ['<tr><td>OS</td><td>' + System.os,
+                  '<tr><td>Browser</td><td>' + System.browser,
+                  '<tr><td>Canvas</td><td>' + System.support.canvas,
+                  '<tr><td>WebGL</td><td>' + System.support.webgl,
+                  '<tr><td>Web Worker</td><td>' + System.support.worker,
+                  '<tr><td>FILE API</td><td>' + System.support.file,
+                  '<tr><td>File System API</td><td>' + System.support.fileSystem,
+                  '<tr><td>localStorage</td><td>' + System.support.localStorage,
+                  '<tr><td>sessionStorage</td><td>' + System.support.sessionStorage,
+                  '<tr><td>requestAnimationFrame</td><td>' + System.support.requestAnimationFrame,
+                  '<tr><td>Placeholder Attribute</td><td>' + System.support.placeholder,
+                  '<tr><td>Range Attribute</td><td>' + System.support.range,
+                  '<tr><td>Geolocation</td><td>' + System.support.geolocation,
+                 ].join('</td></tr>');
+      document.getElementById("info").innerHTML = out;  
+   })();
+   </script>
+</body>
+</html>
+
