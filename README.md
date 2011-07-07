@@ -6,9 +6,11 @@ This Object System allows you to find out the user's system information.
 How to use
 ----------
 
-   <div id="info"></div>
-   <script type="text/javascript">
-   (function(){
+    #HTML
+    <div id="info"></div>
+
+    #JS
+    (function(){
       var out = '<table border="1" cellpadding="10" cellspacing="2">';
           out += ['<tr><td>OS</td><td>' + System.os,
                   '<tr><td>Browser</td><td>' + System.browser,
@@ -25,5 +27,4 @@ How to use
                   '<tr><td>Geolocation</td><td>' + System.support.geolocation,
                  ].join('</td></tr>');
       document.getElementById("info").innerHTML = out;  
-   })();
-   </script>
+    })();
